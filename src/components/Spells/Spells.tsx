@@ -72,10 +72,13 @@ const Spells = ({ passive, spells }: { passive: any, spells: any }) => {
               </video>
             ) : (
               <div key={index} className={`${spell.key === active ? 'block' : 'hidden'}`}>
-                <div className="w-full h-full flex items-center justify-between">
+                <div className="relative w-full h-full flex items-center justify-between">
                   <Image className="absolute w-full h-full object-cover object-center" src="https://www.leagueoflegends.com/static/no-ability-background-fdc6db338e4adb76a0dc80e0728ed6d0.jpg" alt="no-video" width={2000} height={2000} />
-                  <div className="p-5">
-                    <Image className="absolute w-1/2 h-auto object-cover object-center" src="https://www.leagueoflegends.com/static/no-ability-icon-feb372ba66a6fcea09cdacb239b4f171.png" alt="no-video" width={2000} height={2000} />
+                  <div className="w-full flex flex-col items-center justify-center p-10">
+                    <Image className="relative block w-1/2 h-full" src="https://www.leagueoflegends.com/static/no-ability-icon-feb372ba66a6fcea09cdacb239b4f171.png" alt="no-video" width={2000} height={2000} />
+                    <span className="relative font-bold text-2xl italic">
+                      Não é possível exibir esta habilidade em vídeo
+                    </span>
                   </div>
                 </div>
               </div>

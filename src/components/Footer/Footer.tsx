@@ -1,28 +1,24 @@
 import Image from "next/image"
 import Link from "next/link"
-import { BsYoutube, BsTwitter, BsFacebook, BsInstagram, BsReddit } from 'react-icons/bs';
+import { BsTwitter, BsFacebook, BsInstagram, BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
   const social = [
     {
-      href: '',
-      icon: <BsYoutube />
-    },
-    {
-      href: '',
+      href: 'https://twitter.com/K0d4rk',
       icon: <BsTwitter />
     },
     {
-      href: '',
+      href: 'https://www.facebook.com/fernando.henrique99/',
       icon: <BsFacebook />
     },
     {
-      href: '',
+      href: 'https://www.instagram.com/fernandoh99__/',
       icon: <BsInstagram />
     },
     {
-      href: '',
-      icon: <BsReddit />
+      href: 'https://github.com/iKodark',
+      icon: <BsGithub />
     }
   ]
   return (
@@ -31,7 +27,7 @@ const Footer = () => {
         <div className="flex gap-3">
           {
             social.map((media, index) => (
-              <Link key={index} className="p-2 bg-white/10 hover:bg-white/20 transition rounded-lg" href={media.href}>
+              <Link key={index} className="p-2 bg-white/10 hover:bg-white/20 transition rounded-lg" href={media.href} target="_blank">
                 {media.icon}
               </Link>
             ))
