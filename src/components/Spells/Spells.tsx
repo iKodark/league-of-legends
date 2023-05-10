@@ -71,7 +71,7 @@ const Spells = ({ passive, spells }: { passive: any, spells: any }) => {
                 <source src={spell?.preview?.mp4} type="video/mp4" />
               </video>
             ) : (
-              <div className={`${spell.key === active ? 'block' : 'hidden'}`}>
+              <div key={index} className={`${spell.key === active ? 'block' : 'hidden'}`}>
                 <div className="w-full h-full flex items-center justify-between">
                   <Image className="absolute w-full h-full object-cover object-center" src="https://www.leagueoflegends.com/static/no-ability-background-fdc6db338e4adb76a0dc80e0728ed6d0.jpg" alt="no-video" width={2000} height={2000} />
                   <div className="p-5">
