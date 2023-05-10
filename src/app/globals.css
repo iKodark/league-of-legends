@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "LOL";
+  font-weight: 100;
+  src: url("../fonts/BeaufortforLOL-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "LOL";
+  font-weight: 300;
+  src: url("../fonts/BeaufortforLOL-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "LOL";
+  font-weight: 500;
+  src: url("../fonts/BeaufortforLOL-Medium.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "LOL";
+  font-weight: 700;
+  src: url("../fonts/BeaufortforLOL-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "LOL";
+  font-weight: 900;
+  src: url("../fonts/BeaufortforLOL-Heavy.ttf") format("opentype");
+}
