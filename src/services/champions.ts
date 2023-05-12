@@ -62,5 +62,12 @@ export const byName = async (name: String) => {
     } : null
   }
 
-  return { ...championData, spells: spellsResolve, passive: passive }
+  const skins = championData.skins.map((skin: any) => (
+    {
+      ...skin,
+      image: `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championData.id}_${skin.num}.jpg`
+    }
+  ))
+
+  return { ...championData, spells: spellsResolve, passive: passive, skins: skins }
 }

@@ -30,14 +30,22 @@ const Spells = ({ passive, spells }: { passive: any, spells: any }) => {
             }
           </div>
           <div>
-            <span>
+            <h1 className="text-primary text-xl font-bold">
               {
                 active === 'P' ? (
-                  passive.description
+                  passive.name
                 ) : (
-                  spells.find((spell: any) => spell.key === active).description
+                  spells.find((spell: any) => spell.key === active).name
                 )
               }
+            </h1>
+            <span dangerouslySetInnerHTML={{
+              __html: active === 'P' ? (
+                passive.description
+              ) : (
+                spells.find((spell: any) => spell.key === active).description
+              )
+            }}>
             </span>
           </div>
         </div>

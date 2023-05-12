@@ -1,6 +1,6 @@
 import Image from "next/image"
 import services from '@services'
-import { Lore, DifficultyBars, Spells } from '@components'
+import { Lore, DifficultyBars, Spells, Skins } from '@components'
 
 export default async function Page({ params }: any) {
   const champion: any = await services.champions.byName(params.slug)
@@ -18,11 +18,11 @@ export default async function Page({ params }: any) {
     difficulty <= 3 ? 'Fácil'
       : difficulty <= 7 ? 'Moderado'
         : 'Difícil'
-      
+
   return (
     <section className="relative bg-tertiary text-white pb-72">
-      <div className="flex flex-col mx-60">
-        <div className="relative h-full">
+      <div className="flex flex-col mx-40">
+        <div className="relative h-full mx-20">
           <div className="after:absolute after:w-full after:h-full after:bottom-0 after:left-0 after:bg-gradient-to-t after:from-black/75">
             <Image className="w-full h-full object-cover object-center" src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`} alt="patch-banner" width={2000} height={2000} />
           </div>
@@ -67,8 +67,11 @@ export default async function Page({ params }: any) {
             </div>
           </div>
         </div>
-        <div className="w-full flex gap-10 pt-80">
+        <div className="w-full flex gap-10 pt-80 mx-10">
           <Spells spells={champion.spells} passive={champion.passive} />
+        </div>
+        <div className="mt-40">
+          <Skins champion={champion.name} skins={champion.skins} />
         </div>
       </div>
     </section>

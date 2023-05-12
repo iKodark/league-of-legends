@@ -31,3 +31,23 @@
   font-weight: 900;
   src: url("../fonts/BeaufortforLOL-Heavy.ttf") format("opentype");
 }
+
+.swiper-vertical>.swiper-wrapper {
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+
+/* .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  height: 100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
